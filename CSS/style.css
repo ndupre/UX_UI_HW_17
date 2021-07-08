@@ -1,0 +1,171 @@
+/* Body */
+body{
+    background-color: #FCF0EC;
+}
+
+/* Headings and pharagraph styles */
+
+h1{ 
+    font-family: "Volkorn";
+    font-size: 60px;
+    color: #F05B5C;
+    font-weight: 700;
+}
+
+h2{
+    font-family: "Volkorn";
+    font-size:48px; 
+    font-weight: 600;
+    color: #121212;
+}
+
+h3{
+    font-family: "Volkorn";
+    font-size:32px; 
+    font-weight: 600;
+    color: #121212;  
+}
+
+h4{
+    font-family: "Volkorn";
+    font-size:24px; 
+    font-weight: 500;
+    color: #121212;  
+}
+
+p{
+    font-family:"Open Sans";
+    font-size: 18px;
+    font-weight:300;
+    color: #121212;   
+}
+
+.category{
+    font-size: 14px;
+    color: #0D87DB;
+}
+
+/* Header */
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu .logo {
+    margin-left: 3%;
+    width: 200px;
+    height: auto;
+}
+
+#menu .logo image{
+    width: 100%;
+    height: auto;
+}
+
+#menu .nav{
+    margin-right: 3%;
+}
+
+#menu .nav ul {
+   
+
+}
+
+#menu .nav ul li {
+    display: inline-block;
+    margin: 20px;
+    
+}
+
+#menu .nav ul li a {
+    font-family:"Vollkorn";
+    font-size: 20px;
+    font-weight: regular;
+    color: #121212;
+    text-decoration: none;
+}
+
+#menu .nav ul li a:hover {
+   color:#F05B5C;
+}
+
+/* Main */
+
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Hero Section */
+.hero{
+    display: flex;
+}
+
+.hero-image{
+    flex-basis: 40%;
+
+}
+.hero-image img{
+    width: 100%;
+    height: auto;
+}
+.hero-text{
+    flex-basis: 60%;
+}
+
+/* Project Section */
+
+.section-title{
+    box-align:center;
+}
+
+.project{
+    display: flex;
+    padding:3%
+}
+
+.project-img{
+    flex-basis: 50%;
+}
+
+.project-img img{
+    width: 100%;
+    height: auto;
+}
+
+.project-text{
+    flex-basis: 50%;
+}
+
+.project-text a{
+    font-size: 24px ;
+    font-style: italic;
+    font-weight: 600;
+    color: #121212;
+    background-image: url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 26px;
+}
+
+.project:nth-of-type(odd){
+}
+
+.project:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+
+.project:nth-of-type(even) .project-text{
+    text-align: right;
+}
+/* Footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+
+

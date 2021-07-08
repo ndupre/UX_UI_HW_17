@@ -4,75 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <title>Nicole Dupre UX Portfolio</title>
 </head>
 <body>
-    <header class="navigation">
-        <div class="inline-block logo">
+    <header class="wrapper" id="menu">
+        <div class="logo">
             <img src="./images/logo.png">
         </div>
-        <nav class="inline-block"> 
+        <nav class="nav"> 
             <ul>
-                <li>
-                    <a href="http://">About</a>
-                </li>
-                <li>
-                    <a href="http://">Skills</a>
-                </li>
-                <li>
-                    <a href="">Work</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="heroimg">
-        <img src="./images/hero.png">
-        <p class="hero">
-            <h1>Hi, I'm Nicole Dupre</h1>
-            <h4>Ux Designer specialized on Interaction Design. I love making complex interactions in to seamless experiences.</h4>
-            <p class="inline-block">Find me on:
-                <a class="social linkedin" href="https://www.linkedin.com/in/ndupre/">LinkedIn</a>
-                <a class="social Dribbble" href="https://www.linkedin.com/in/ndupre/">Dribbble</a>
-            </p>
-            <p> Or Drop me a line at nicole.dupre@gmail.com</p>    
-        </p>
-        <button>Download Resume</button>
-    </section>
-    <section class="projects">
-        <a class="arrow-down">Relevant Projects</a>
-        <div class="project 1">
-            <img class="left" src="../UX_UI_HW_17/images/NewSanctuary-home.png" alt="desktop and mobile view of the homepage">
-            <div  class="text right">
-                <p class="category"> #NOP #Redesign #Research #signup #donation</p>
-                <h2>New Sanctuary Coalition</h2>
-                <p> Lorem Impsum dolor sit amet consecture asiplicing volupat, purus felts lorem impus donlor sit amet.</p>
-                <a class="arrow" href="">View Project</a>
+    <main class="wrapper">
+        <section class="hero">
+            <figure class="hero-image">
+                <img src="./images/hero.png">
+            </figure>
+            <div class="hero-text">
+                <h1>Hi, I'm Nicole Dupre</h1>
+                <h4>Ux Designer specialized on Interaction Design. I love making complex interactions in to seamless experiences.</h4>
+                <p class="inline-block">Find me on:
+                    <a class="social linkedin" href="https://www.linkedin.com/in/ndupre/">LinkedIn</a>
+                    <a class="social Dribbble" href="https://www.linkedin.com/in/ndupre/">Dribbble</a>
+                </p>
+                <p> Or Drop me a line at nicole.dupre@gmail.com</p>    
+                <button>Download Resume</button>
             </div>
-         </div>
-         <div class="project 2">
-            <div  class="text left">
-                <p class="category"> #NOP #Redesign #Research #signup #donation</p>
-                <h2>WeCycle</h2>
-                <p> Lorem Impsum dolor sit amet consecture asiplicing volupat, purus felts lorem impus donlor sit amet.</p>
-                <a class="arrow" href="">View Project</a>
+        </section>
+
+
+        <section class="projects">
+            <h3 calignlass="section-title">Relevant Projects</h3>
+
+            <div class="project">
+                <figure class="project-img">
+                    <img src="../UX_UI_HW_17/images/NewSanctuary-home.png" alt="desktop and mobile view of the homepage"/>
+                </figure>
+                <div  class="project-text">
+                    <p class="category"> #NOP #Redesign #Research #signup #donation</p>
+                    <h2>New Sanctuary Coalition</h2>
+                    <p> Lorem Impsum dolor sit amet consecture asiplicing volupat, purus felts lorem impus donlor sit amet.</p>
+                    <a class="arrow" href="">View Project</a>
+                </div>
             </div>
-            <img class="right" src="../UX_UI_HW_17/images/WeCycle-home.png" alt="desktop and mobile view of the homepage">
-         </div>
 
-    </section>
+            <div class="project">
+                <figure class="project-img">
+                    <img src="../UX_UI_HW_17/images/WeCycle-home.png" alt="desktop and mobile view of the homepage"/>
+                </figure>
+                
+                <div  class="project-text">
+                    <p class="category"> #NOP #Redesign #Research #signup #donation</p>
+                    <h2>WeCycle</h2>
+                    <p> Lorem Impsum dolor sit amet consecture asiplicing volupat, purus felts lorem impus donlor sit amet.</p>
+                    <a class="arrow" href="">View Project</a>
+                </div>
+            </div>
 
-    <footer>
-        <p>2020 Nicole Dupre, All rights reserved</p>
-        <ul>
+        </section>
+    </main>
+
+    <footer class="wrapper">
+             <p>2020 Nicole Dupre, All rights reserved</p>
+        <ul class="social">
             <a class="footer-linkedin"></a>
             <a class="footer-dribbble"></a>
         </ul>
         <a>Contact</a>
-
     </footer>
     
 </body>
