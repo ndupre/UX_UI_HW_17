@@ -10,6 +10,8 @@ h1{
     font-size: 60px;
     color: #F05B5C;
     font-weight: 500;
+    line-height: 60px;
+    margin: 0;
 }
 
 h2{
@@ -17,13 +19,14 @@ h2{
     font-size:48px; 
     font-weight: 600;
     color: #121212;
-    line-height: 0.5;
+    line-height: 48px;
+    margin: 0;
 }
 
 h3{
     font-family: "Volkorn";
     font-size:32px; 
-    font-weight: 600;
+    font-weight: 500;
     color: #121212;  
 }
 
@@ -91,6 +94,7 @@ p{
 
 #menu .nav ul li a:hover {
    color:#F05B5C;
+   transition: color 0.3s ease; 
 }
 
 /* Main */
@@ -106,7 +110,7 @@ p{
 .hero{
     display: flex;
     justify-content:space-between;
-    height: calc(100vh - 140px);
+    height: calc(70vh - 140px);
     align-items: center;
     padding: 5%;
 }
@@ -128,27 +132,56 @@ p{
 
 .hero-text p a.social-linkedin{
     color:#0D87DB;
-    background-image:url(../images/icon-linkedin-hero.png);
-    background-size: cover;
+    background-image:url(../images/icon-linkedin.svg);
+    background-repeat: no-repeat;
+    background-position: left 3px;
+    padding-left: 24px;
+    background-size: 18px;
+    margin-left: 10px; 
+    transition: all 0.3s ease;  
+    text-decoration: none; 
+}
+
+.hero-text p a.social-linkedin:hover{
+    color:#0865A5;
+    text-decoration: underline;
     
 }
 
+.hero-text p a.social-dribbble{
+    color:#0D87DB;
+    background-image:url(../images/icon-dribbble.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 24px;
+    background-size: 18px;   
+    margin-left: 10px;
+    transition: all 0.3s ease;  
+    text-decoration: none; 
+}
+
+.hero-text p a.social-dribbble:hover{
+    color:#0865A5;
+    text-decoration: underline;
+    
+}
 
 /* Project Section */
 
 .projects .section-title{
-    box-align:center;
+    text-align:center;
 }
 
 .project{
     display: flex;
-    padding:3%;
-    height: 70vh;
+    padding:50px 15vh;
     align-items: center;
+    justify-content: space-between;
 }
 
 .project-img{
     flex-basis: 50%;
+    margin:0px;
 }
 
 .project-img img{
@@ -157,7 +190,7 @@ p{
 }
 
 .project-text{
-    flex-basis: 50%;
+    flex-basis: 45%;
 }
 
 .project-text a{
@@ -165,14 +198,17 @@ p{
     font-style: italic;
     font-weight: 500;
     color: #121212;
-    background-image: url(../images/arrow-right.png);
+    background-image: url(../images/arrow-right.svg);
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 26px;
+    transition: color 0.3s ease; 
 }
 
 .project-text a:hover {
-    color:#0D87DB;
+    color:#F05B5C;
+    transition: color 0.3s ease;
+    background-image: url(../images/arrow-right-red.svg);
  }
 
 .project:nth-of-type(odd){
@@ -181,9 +217,12 @@ p{
 .project:nth-of-type(even){
     flex-direction: row-reverse;
 }
-
+.project:nth-of-type(even) .project-img{
+    flex-basis: 45;
+}
 .project:nth-of-type(even) .project-text{
     text-align: right;
+    flex-basis: 50;
 }
 
 /* Footer*/
@@ -192,6 +231,7 @@ footer{
     width: 100%;
     height: 120px;
     display: flex;
+    margin-top: 15vh;
 }
 
 footer .wrapper{
@@ -200,30 +240,34 @@ footer .wrapper{
     align-items: center;
 }
 
+footer p{
+    font-size: 14px;
+}
+
 footer ul.social{
     padding:0;
 }
 
 footer ul.social li{
-    display: inline-block;
-    
+    display: inline-block;  
 }
-
 
 footer a.footer-linkedin{
     display: block;
     width: 22px;
-    height: 20px;
-    background-size: cover;
-    background-image: url(../images/icon-linkedin-footer.png);
+    height: 22px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon-linkedin.svg);
 }
 
 footer a.footer-dribbble{
     display: block;
     width: 22px;
     height: 22px;
-    background-size: cover;
-    background-image: url(../images/icon-dribbble-footer.png);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon-dribbble.svg);
     margin-left: 15px;
 }
 
@@ -232,10 +276,10 @@ a.contact{
     font-size: 20px;
     font-weight: regular;
     color:#121212;
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
     
 a.contact:hover {
-    color:#F05B5C; 
+    color:#F05B5C;
+    transition: color 0.3s ease;  
 }
