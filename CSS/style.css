@@ -165,7 +165,13 @@ p{
     text-decoration: underline;
     
 }
-
+/* Skills Section */
+.my-skills{
+    display: flex;
+    padding:50px 15vh;
+    align-items: center;
+    justify-content: space-between;
+}
 /* Project Section */
 
 .projects .section-title{
@@ -218,11 +224,11 @@ p{
     flex-direction: row-reverse;
 }
 .project:nth-of-type(even) .project-img{
-    flex-basis: 45;
+    flex-basis: 45%;
 }
 .project:nth-of-type(even) .project-text{
     text-align: right;
-    flex-basis: 50;
+    flex-basis: 50%;
 }
 
 /* Footer*/
