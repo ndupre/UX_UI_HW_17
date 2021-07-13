@@ -110,7 +110,7 @@ p{
 .hero{
     display: flex;
     justify-content:space-between;
-    height: calc(70vh - 140px);
+    height: calc(60vh - 140px);
     align-items: center;
     padding: 5%;
 }
@@ -166,16 +166,56 @@ p{
     
 }
 /* Skills Section */
+
 .my-skills{
     display: flex;
-    padding:50px 15vh;
-    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: white; */
+    /* padding:25px 20vh; */
     justify-content: space-between;
+    height: calc(50vh - 140px);
+    padding-bottom: 100px;
 }
+
+.my-skills h3{
+    text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 7%;
+}
+
+.skill{
+    flex-basis: calc( (100%/3) - 60px );
+    
+}
+
+.skill h4{ 
+    text-align: center;
+}
+
+.skill-img{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.skill-img img{
+    width: 25%;
+    height: auto;
+    margin: auto;
+}
+
+.skill p.category{ 
+    color:#121212!important;
+}
+
+
 /* Project Section */
 
 .projects .section-title{
     text-align:center;
+    margin-bottom: 5%;
 }
 
 .project{
@@ -183,6 +223,7 @@ p{
     padding:50px 15vh;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5%;
 }
 
 .project-img{
