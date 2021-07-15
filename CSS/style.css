@@ -3,6 +3,10 @@ body{
     background-color: #FCF0EC;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /* Headings and pharagraph styles */
 
 h1{ 
@@ -14,6 +18,12 @@ h1{
     margin: 0;
 }
 
+@media screen and (max-width: 860px) {
+    .hero h1{
+        font-size: 42px;
+    }
+}
+
 h2{
     font-family: "Volkorn";
     font-size:48px; 
@@ -23,6 +33,12 @@ h2{
     margin: 0;
 }
 
+@media screen and (max-width: 860px) {
+    h2{
+        font-size: 36px;
+    }
+}
+
 h3{
     font-family: "Volkorn";
     font-size:32px; 
@@ -30,11 +46,23 @@ h3{
     color: #121212;  
 }
 
+@media screen and (max-width: 860px) {
+    h3{
+        font-size: 28px;
+    }
+}
+
 h4{
     font-family: "Volkorn";
     font-size:24px; 
     font-weight: 500;
     color: #121212;  
+}
+
+@media screen and (max-width: 860px) {
+    .hero h4{
+        font-size: 20px;
+    }
 }
 
 p{
@@ -55,27 +83,62 @@ p{
     display: flex;
     justify-content: space-between;
     height: 100px;
-    padding-top: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+
+@media screen and (max-width: 860px) {
+    #menu {
+        height: 60px;
+    }
 }
 
 #menu .logo {
-    margin-left: 3%;
-    width: 200px;
-    height: auto;
+    margin-left: 50px;
+    width: auto;
+    height: 90%;
 }
 
-#menu .logo image{
-    width: 100%;
-    height: auto;
+@media screen and (max-width: 860px) {
+    #menu .logo{
+        margin-left: 25px;
+    }
+}
+
+
+#menu .logo img{
+    width: auto;
+    height: 100%;
 }
 
 #menu .nav{
-    margin-right: 3%;
+    margin-right: 50px;
+}
+
+#menu .nav .toggler {
+    display:none;
+    font-family:"Vollkorn";
+    font-size: 20px;
+    font-weight: regular;
+    color: #121212;
+    text-decoration: none;
+    margin: 10px 0 0 0;
+}
+
+@media screen and (max-width: 860px) {
+    #menu .nav .toggler {
+        display:block;
+    }
 }
 
 #menu .nav ul {
-   
+}
 
+@media screen and (max-width: 860px) {
+    #menu .nav ul {
+        display:none;   
+    }
 }
 
 #menu .nav ul li {
@@ -109,25 +172,49 @@ p{
 /* Hero Section */
 .hero{
     display: flex;
-    justify-content:space-between;
-    height: calc(60vh - 140px);
+    justify-content: space-between;
     align-items: center;
-    padding: 5%;
+    padding: 50px;
 }
 
-.hero-image{
+
+@media screen and (max-width: 860px) {
+    .hero{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.hero .hero-image{
     flex-basis: 40%;
     align-self: center;
 }
+
+@media screen and (max-width: 860px) {
+    .hero .hero-image{
+        order: 1;
+        flex-basis: 60%;
+    }
+}
+
+
 .hero-image img{
-    padding: 1%;
     width: 100%;
     height: auto;
 }
-.hero-text{
-    padding:2%;
+
+.hero .hero-text{
     flex-basis: 50%;
     align-self: center;
+}
+
+@media screen and (max-width: 860px) {
+    .hero .hero-text{
+        order: 0;
+        flex-basis: 80%;
+        text-align: center;
+    }
 }
 
 .hero-text p a.social-linkedin{
@@ -142,6 +229,10 @@ p{
     text-decoration: none; 
 }
 
+.hero-text p.category{ 
+    color:#121212!important;
+    line-height: 1.5;
+}
 .hero-text p a.social-linkedin:hover{
     color:#0865A5;
     text-decoration: underline;
@@ -162,30 +253,46 @@ p{
 
 .hero-text p a.social-dribbble:hover{
     color:#0865A5;
-    text-decoration: underline;
-    
+    text-decoration: underline;   
 }
+
 /* Skills Section */
 
 .my-skills{
     display: flex;
     flex-wrap: wrap;
-    /* background-color: white; */
-    /* padding:25px 20vh; */
     justify-content: space-between;
-    height: calc(50vh - 140px);
-    padding-bottom: 100px;
+    padding: 50px;
+}
+
+@media screen and (max-width: 720px) {
+    .my-skills{
+        justify-content: center;
+    }
 }
 
 .my-skills h3{
     text-align: center;
     flex-basis: 100%;
-    margin-bottom: 7%;
+    margin-bottom: 50px;
 }
 
 .skill{
-    flex-basis: calc( (100%/3) - 60px );
-    
+    flex-basis: calc( (100%/3) - 60px );  
+}
+
+@media screen and (max-width: 1024px) {
+    .skill{
+        flex-basis: calc( (100%/3) - 15px );
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .skill{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        max-width: 400px;
+    }
 }
 
 .skill h4{ 
@@ -199,7 +306,6 @@ p{
 
 }
 
-
 .skill-img img{
     width: 25%;
     height: auto;
@@ -208,27 +314,44 @@ p{
 
 .skill p.category{ 
     color:#121212!important;
+    line-height: 1.5;
 }
-
 
 /* Project Section */
 
+.projects{
+        padding: 50px 0;
+}
+
 .projects .section-title{
     text-align:center;
-    margin-bottom: 5%;
 }
 
 .project{
     display: flex;
-    padding:50px 15vh;
+    padding: 50px;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5%;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 860px) {
+    .project{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .project-img{
     flex-basis: 50%;
     margin:0px;
+}
+
+@media screen and (max-width: 860px) {
+    .project-img{
+        flex-basis: 100%;
+        margin:0px auto 30px auto;
+    }
 }
 
 .project-img img{
@@ -238,6 +361,14 @@ p{
 
 .project-text{
     flex-basis: 45%;
+}
+
+@media screen and (max-width: 860px) {
+    .project-text{
+        flex-basis: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
 }
 
 .project-text a{
@@ -264,12 +395,27 @@ p{
 .project:nth-of-type(even){
     flex-direction: row-reverse;
 }
+
 .project:nth-of-type(even) .project-img{
     flex-basis: 45%;
 }
+
+@media screen and (max-width: 860px) {
+    .project:nth-of-type(even) .project-img{
+        flex-basis: 100%;
+    }
+}
+
 .project:nth-of-type(even) .project-text{
     text-align: right;
     flex-basis: 50%;
+}
+
+@media screen and (max-width: 860px) {
+    .project:nth-of-type(even) .project-text{
+        flex-basis: 100%;
+        text-align: center;
+    }
 }
 
 /* Footer*/
@@ -277,9 +423,20 @@ footer{
     background-color: white;
     width: 100%;
     height: 120px;
+    padding: 0 50px;
     display: flex;
-    margin-top: 15vh;
+    box-sizing: border-box;
 }
+
+/* footer{ 
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding-top: 0 50px;
+    box-sizing: border-box;
+
+}
+*/
 
 footer .wrapper{
     display: flex;
@@ -287,8 +444,23 @@ footer .wrapper{
     align-items: center;
 }
 
+@media screen and (max-width: 860px) {
+
+    footer{
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+}
+
 footer p{
     font-size: 14px;
+}
+
+@media screen and (max-width: 860px) {
+
+    footer p{
+    display:none;
+    }
 }
 
 footer ul.social{
